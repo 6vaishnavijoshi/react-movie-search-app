@@ -1,3 +1,4 @@
+import "./App.css";
 import { useState } from "react";
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="app">
       <h1>Movie Search App</h1>
 
       <input
@@ -32,7 +33,8 @@ function App() {
       </button>
 
       {movie && (
-        <div>
+      <div className="movie-card">
+    
           <h2>{movie.Title}</h2>
           <p>Year: {movie.Year}</p>
           <img src={movie.Poster} alt={movie.Title} />
